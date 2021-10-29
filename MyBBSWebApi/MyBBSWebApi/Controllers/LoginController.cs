@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using MyBBSWebApi.Core;
 
 namespace MyBBSWebApi.Controllers
 {
@@ -11,32 +12,33 @@ namespace MyBBSWebApi.Controllers
         [HttpGet]
         public string Get(string userNo, string password)
         {
-            DataRow dr = null;
-            using (SqlConnection conn = new SqlConnection("server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001"))
+            SqlHelper sqlHelper = new SqlHelper();
+            DataTable dataTable = sqlHelper.ExecuteTable("SELECT * FROM Users");
+            if (dataTable.Rows.Count>0)
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * from Users", conn);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                sda.Fill(ds);
-                DataTable res = ds.Tables[0];
-                dr = res.Rows[0];
+                DataRow dr = dataTable.Rows[0];
+                string userNum = dr["UserNo"].ToString();
+                string passwd = dr["Password"].ToString();
+                if (userNum == userNo && passwd == password)
+                {
+                    return "success!";
+                }
+
+                else
+                {
+                    return "false";
+                }
             }
-            string userNum = dr["UserNo"].ToString();
-            string passwd = dr["Password"].ToString();
-
-
-
-
-            if (userNum == userNo && passwd == password)
-            {
-                return "success!";
-            }
-
             else
             {
-                return "false";
+                return "表为空！";
             }
+            
+
+
+
+
+            
 
 
 
@@ -44,20 +46,42 @@ namespace MyBBSWebApi.Controllers
         }
 
         [HttpPost]
-        public string Insert()
+        public string Insert(string UserNo,string UserName,int Userlevel,string Password)
         {
-            return "啊啊大大啊";
+            using (SqlConnection conn = new SqlConnection("server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001"))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand($"INSERT INTO Users(UserNo,Password,UserName,Userlevel) VALUES('{UserNo}','{Password}','{UserName}','{Userlevel}')", conn);
+                cmd.ExecuteNonQuery();
+            }
+                return "啊啊大大啊";
         }
 
         [HttpPut]
-        public string Update()
+        public string Update(string UserNo, string UserName, int Userlevel, string Password)
         {
+            using (SqlConnection conn = new SqlConnection("server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001"))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand($"UPDATE Users SET Password = '666888' Where Id = '1" +
+                    $"'", conn);
+                cmd.ExecuteNonQuery();
+            }
+
+
             return "啊啊大大啊";
         }
 
         [HttpDelete]
-        public string Remove()
+        public string Remove(int Id)
         {
+
+            using (SqlConnection conn = new SqlConnection("server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001"))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand($"DELETE FROM Users WHERE Id = {Id}", conn);
+                cmd.ExecuteNonQuery();
+            }
             return "啊啊大大啊";
         }
 
