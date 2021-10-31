@@ -1,37 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
 
 namespace MyBBSWebApi.Core
 {
     public class SqlHelper
     {
-        
         public string ConnectionString
         {
             get;
             set;
-        }= "server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001"; 
+        } = "server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001";
 
-    public DataTable ExecuteTable(string cmdText,params SqlParameter[] sqlParameters)
+        public DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
-            SqlCommand cmd = new SqlCommand(cmdText,conn);
+            SqlCommand cmd = new SqlCommand(cmdText, conn);
             cmd.Parameters.AddRange(sqlParameters);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             sda.Fill(ds);
             return ds.Tables[0];
-
-
         }
 
-
-        public int ExecuteNonQuery(string cmdText,params SqlParameter[] sqlParameters)
+        public int ExecuteNonQuery(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
@@ -39,12 +31,5 @@ namespace MyBBSWebApi.Core
             cmd.Parameters.AddRange(sqlParameters);
             return cmd.ExecuteNonQuery();
         }
-
-
-
-
-
-
-
     }
 }
