@@ -5,13 +5,13 @@ namespace MyBBSWebApi.Core
 {
     public class SqlHelper
     {
-        public string ConnectionString
+        public static string ConnectionString
         {
             get;
             set;
         } = "server=162.14.77.192;database=MYBBSDB;Uid=sa;Pwd=Sunrisep1001";
 
-        public DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
+        public static DataTable ExecuteTable(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
@@ -23,7 +23,7 @@ namespace MyBBSWebApi.Core
             return ds.Tables[0];
         }
 
-        public int ExecuteNonQuery(string cmdText, params SqlParameter[] sqlParameters)
+        public static int ExecuteNonQuery(string cmdText, params SqlParameter[] sqlParameters)
         {
             using SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();

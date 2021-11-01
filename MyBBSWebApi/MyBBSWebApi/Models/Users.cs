@@ -18,6 +18,6 @@ namespace MyBBSWebApi.Models
         public int UserLevel { get; set; }
 
 
-
+        public bool IsDelete { get;set; }
     }
 }
