@@ -1,29 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using MyBBSWebApi.Bll;
+using MyBBSWebApi.Bll.Interfaces;
 using MyBBSWebApi.Core;
 using MyBBSWebApi.Dal;
 using MyBBSWebApi.Models;
+using System.Collections.Generic;
 using System.Data;
 
 namespace MyBBSWebApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[Route("api/[controller]/[action]")]
+    [Route("[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
         [HttpGet]
-        public string Get(string userNo, string password)
+        public List<Users> GetAll()
         {
-            UserDal userDal = new UserDal();
-            bool result = userDal.GetUserByUserNoAndPassword(userNo,password);
-                if (result)
-                {
-                    return "success!";
-                }
-                else
-                {
-                    return "false";
-                }
+            IUserBll userBll = new UserBll();
+            return userBll.GetAll(); 
+        }
+
+
+
+        [HttpGet("{userNo}/{password}")]
+        public Users GetLoginRes(string userNo, string password)
+        {
+            UserBll userBll = new UserBll();
+            Users user = userBll.CheckLogin(userNo, password);
+            return user;
            
            
         }
@@ -39,7 +45,8 @@ namespace MyBBSWebApi.Controllers
                 return "success!";
             }
             else
-            {
+            {   
+
                 return "false!";
             }
         }

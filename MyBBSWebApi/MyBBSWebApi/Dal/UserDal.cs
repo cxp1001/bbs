@@ -11,29 +11,23 @@ namespace MyBBSWebApi.Dal
 {
     public class UserDal
     {
+        public List<Users> GetAll()
+        {
+            DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users");
+
+
+            return ToModelList(dataTable);
+        }
+
+
         public List<Users> GetUserByUserNoAndPassword(string userNo, string password)
         {
 
             
             DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND Password = @Password", new SqlParameter("@UserNo", userNo), new SqlParameter("@Password", password));
-            List<Users> userList = new List<Users>();
 
 
-            for (int i = 0; i < dataTable.Rows.Count; i++)
-            {
-                DataRow dr = dataTable.Rows[i];
-               
-                userList.Add(new Users
-                {
-                    Id = (int)dr["Id"],
-                    Password = dr["Password"].ToString(),
-                    UserLevel = (int)dr["Userlevel"],
-                    UserName = dr["UserName"].ToString(),
-                    UserNo = dr["UserNo"].ToString()
-                });
-            }
-
-            return userList;
+            return ToModelList(dataTable);
 
 
         }
@@ -42,20 +36,19 @@ namespace MyBBSWebApi.Dal
         public Users GetUserById(int id)
         {
             DataRow dr = null;
-            Users user = new Users();
+         
             DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Id = @Id", new SqlParameter("@Id", id));
-            if (dataTable.Rows.Count != 0)
+            if (dataTable.Rows.Count > 0)
             {
                 dr = dataTable.Rows[0];
-               
-                user.Id = (int)dr["Id"];
-                user.Password = dr["Password"].ToString();
-                user.UserLevel = (int)dr["Userlevel"];
-                user.UserName = dr["UserName"].ToString();
-                user.UserNo = dr["UserNo"].ToString();
-               
+                Users user = ToModel(dr);
+                return user;
             }
-            return user;
+            else
+            {
+                return default;
+            }
+           
 
 
         }
@@ -105,6 +98,38 @@ namespace MyBBSWebApi.Dal
 
 
         }
+
+
+        private List<Users> ToModelList(DataTable dataTable)
+        {
+            List<Users> userList = new List<Users>();
+
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                DataRow dr = dataTable.Rows[i];
+
+                Users user = ToModel(dr);
+                userList.Add(user);
+            }
+
+            return userList;
+        }
+
+
+
+        private Users ToModel(DataRow dr)
+        {
+            Users user = new Users();
+            user.Id = (int)dr["Id"];
+            user.Password = dr["Password"].ToString();
+            user.UserLevel = (int)dr["Userlevel"];
+            user.UserName = dr["UserName"].ToString();
+            user.UserNo = dr["UserNo"].ToString();
+            user.IsDelete = (bool)dr["IsDelete"];
+            return user;
+        }
+
+
     }
 
 }
