@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi", "MyBBSWebApi\MyBBSWebApi.csproj", "{F56113A8-AEDD-4D1B-99A6-12A7DB734380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBBSWebApi", "MyBBSWebApi\MyBBSWebApi.csproj", "{F56113A8-AEDD-4D1B-99A6-12A7DB734380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.DAL", "MyBBSWebApi.DAL\MyBBSWebApi.DAL.csproj", "{FB2262E4-980F-4E62-84C9-F8F6FD14F40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.BLL", "MyBBSWebApi.BLL\MyBBSWebApi.BLL.csproj", "{F4841889-CCEB-43B9-AFBC-4891B247BCF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.Models", "MyBBSWebApi.Models\MyBBSWebApi.Models.csproj", "{54FAF581-146C-482A-9A25-C3CCFDCF1469}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{F56113A8-AEDD-4D1B-99A6-12A7DB734380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F56113A8-AEDD-4D1B-99A6-12A7DB734380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F56113A8-AEDD-4D1B-99A6-12A7DB734380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2262E4-980F-4E62-84C9-F8F6FD14F40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2262E4-980F-4E62-84C9-F8F6FD14F40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2262E4-980F-4E62-84C9-F8F6FD14F40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2262E4-980F-4E62-84C9-F8F6FD14F40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4841889-CCEB-43B9-AFBC-4891B247BCF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4841889-CCEB-43B9-AFBC-4891B247BCF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4841889-CCEB-43B9-AFBC-4891B247BCF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4841889-CCEB-43B9-AFBC-4891B247BCF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

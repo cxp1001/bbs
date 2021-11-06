@@ -89,7 +89,6 @@ J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.GeneratedMSBuildEdit
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.AssemblyInfoInputs.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.AssemblyInfo.cs
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.CoreCompileInputs.cache
-J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.MvcApplicationPartsAssemblyInfo.cs
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.MvcApplicationPartsAssemblyInfo.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\staticwebassets\MyBBSWebApi.StaticWebAssets.Manifest.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\staticwebassets\MyBBSWebApi.StaticWebAssets.xml
@@ -100,3 +99,10 @@ J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\ref\MyBBSWebApi.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.pdb
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.genruntimeconfig.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.AssemblyReference.cache
+J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.CopyComplete
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.BLL.dll
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.DAL.dll
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.Models.dll
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.BLL.pdb
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.Models.pdb
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.DAL.pdb

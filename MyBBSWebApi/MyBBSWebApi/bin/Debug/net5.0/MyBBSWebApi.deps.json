@@ -34,6 +34,8 @@
       "MyBBSWebApi/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "3.0.1",
+          "MyBBSWebApi.BLL": "1.0.0",
+          "MyBBSWebApi.Models": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -709,6 +711,38 @@
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
+        }
+      },
+      "MyBBSWebApi.BLL/1.0.0": {
+        "dependencies": {
+          "MyBBSWebApi.DAL": "1.0.0",
+          "MyBBSWebApi.Models": "1.0.0"
+        },
+        "runtime": {
+          "MyBBSWebApi.BLL.dll": {}
+        },
+        "compile": {
+          "MyBBSWebApi.BLL.dll": {}
+        }
+      },
+      "MyBBSWebApi.DAL/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "3.0.1",
+          "MyBBSWebApi.Models": "1.0.0"
+        },
+        "runtime": {
+          "MyBBSWebApi.DAL.dll": {}
+        },
+        "compile": {
+          "MyBBSWebApi.DAL.dll": {}
+        }
+      },
+      "MyBBSWebApi.Models/1.0.0": {
+        "runtime": {
+          "MyBBSWebApi.Models.dll": {}
+        },
+        "compile": {
+          "MyBBSWebApi.Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -2696,6 +2730,21 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "MyBBSWebApi.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyBBSWebApi.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyBBSWebApi.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

@@ -563,6 +563,44 @@
             "rid": "win"
           }
         }
+      },
+      "MyBBSWebApi.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MyBBSWebApi.DAL": "1.0.0",
+          "MyBBSWebApi.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.BLL.dll": {}
+        }
+      },
+      "MyBBSWebApi.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "3.0.1",
+          "MyBBSWebApi.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.DAL.dll": {}
+        }
+      },
+      "MyBBSWebApi.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.Models.dll": {}
+        }
       }
     }
   },
@@ -1742,11 +1780,28 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "MyBBSWebApi.BLL/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj",
+      "msbuildProject": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj"
+    },
+    "MyBBSWebApi.DAL/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
+      "msbuildProject": "../MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj"
+    },
+    "MyBBSWebApi.Models/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.Models/MyBBSWebApi.Models.csproj",
+      "msbuildProject": "../MyBBSWebApi.Models/MyBBSWebApi.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.Data.SqlClient >= 3.0.1",
+      "MyBBSWebApi.BLL >= 1.0.0",
+      "MyBBSWebApi.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -1776,7 +1831,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
+              "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj"
+            },
+            "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+              "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

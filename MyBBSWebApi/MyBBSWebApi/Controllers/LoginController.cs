@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
-using MyBBSWebApi.Bll;
-using MyBBSWebApi.Bll.Interfaces;
-using MyBBSWebApi.Core;
-using MyBBSWebApi.Dal;
+using MyBBSWebApi.BLL;
+using MyBBSWebApi.DAL;
+using MyBBSWebApi.DAL.Core;
 using MyBBSWebApi.Models;
 using System.Collections.Generic;
 using System.Data;
@@ -15,11 +14,18 @@ namespace MyBBSWebApi.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
+        private readonly IUserBll _userBll;
+
+        public LoginController(IUserBll userBll)
+        {
+            _userBll = userBll;
+        }
+
         [HttpGet]
         public List<Users> GetAll()
         {
-            IUserBll userBll = new UserBll();
-            return userBll.GetAll(); 
+            
+            return _userBll.GetAll(); 
         }
 
 
@@ -27,59 +33,32 @@ namespace MyBBSWebApi.Controllers
         [HttpGet("{userNo}/{password}")]
         public Users GetLoginRes(string userNo, string password)
         {
-            UserBll userBll = new UserBll();
-            Users user = userBll.CheckLogin(userNo, password);
+            
+            Users user = _userBll.CheckLogin(userNo, password);
             return user;
            
            
         }
 
         [HttpPost]
+
+        
         public string Insert(string UserNo, string UserName, int Userlevel, string Password)
         {
-            UserDal userDal = new UserDal();
-            int effectedRows = userDal.AddUser(UserNo, UserName, Userlevel, Password);
-
-            if (effectedRows > 0)
-            {
-                return "success!";
-            }
-            else
-            {   
-
-                return "false!";
-            }
+            return _userBll.AddUser(UserNo, UserName, Userlevel, Password);
         }
 
         [HttpPut]
         public string Update(int id,string userNo,string userName,string password,int? userLevel)
         {
 
-            UserDal userDal = new UserDal();
-            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel);
-            if (effectedRows>0)
-            {
-                return "success!";
-            }
-            else
-            {
-                return "false!";
-            }
+            return _userBll.UpdateUser(id, userNo, userName, password, userLevel); 
         }
 
         [HttpDelete]
         public string Remove(int id)
         {
-            UserDal userDal = new UserDal();
-            int effectedRows = userDal.RemoveUser(id);
-            if (effectedRows > 0)
-            {
-                return "success!";
-            }
-            else
-            {
-                return "false!";
-            }
+            return _userBll.RemoveUser(id);
         }
     }
 }
