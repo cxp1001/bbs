@@ -24,6 +24,7 @@ namespace MyBBSWebApi.BLL
             else
             {
                 Users user = userlist.Find(m => !m.IsDelete);
+                user.Token = Guid.NewGuid();
                 return user;
             }
 
@@ -47,11 +48,11 @@ namespace MyBBSWebApi.BLL
         }
 
 
-        public string UpdateUser(int id, string userNo, string userName, string password, int? userLevel)
+        public string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token)
         {
 
             UserDal userDal = new UserDal();
-            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel);
+            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel,token);
             if (effectedRows > 0)
             {
                 return "success!";

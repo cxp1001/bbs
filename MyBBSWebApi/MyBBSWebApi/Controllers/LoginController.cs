@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
 
 namespace MyBBSWebApi.Controllers
 {
@@ -53,10 +54,10 @@ namespace MyBBSWebApi.Controllers
         }
 
         [HttpPut]
-        public string Update(int id,string userNo,string userName,string password,int? userLevel)
+        public string Update(int id,string userNo,string userName,string password,int? userLevel,Guid token)
         {
 
-            return _userBll.UpdateUser(id, userNo, userName, password, userLevel); 
+            return _userBll.UpdateUser(id, userNo, userName, password, userLevel,token); 
         }
 
         [HttpDelete]

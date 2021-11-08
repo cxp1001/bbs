@@ -17,7 +17,8 @@ namespace MyBBSWebApi.Models
 
         public int UserLevel { get; set; }
 
-
         public bool IsDelete { get;set; }
+
+        public Guid Token{get;set;} 
     }
 }

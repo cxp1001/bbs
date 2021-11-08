@@ -63,7 +63,7 @@ namespace MyBBSWebApi.DAL
         }
 
 
-        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel)
+        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel,Guid? token)
         {
 
             DataRow dr = null;
@@ -78,13 +78,16 @@ namespace MyBBSWebApi.DAL
                 user.UserLevel = userLevel ?? (int)dr["Userlevel"];
                 user.UserName = userName ?? dr["UserName"].ToString();
                 user.UserNo = userNo ?? dr["UserNo"].ToString();
+                user.Token = token??new Guid();
 
-                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password WHERE Id = @Id",
+                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token WHERE Id = @Id",
                 new SqlParameter("@UserNo", user.UserNo),
                 new SqlParameter("@UserName", user.UserName),
                 new SqlParameter("@UserLevel", user.UserLevel),
                 new SqlParameter("@Password", user.Password),
-                new SqlParameter("@Id", user.Id));
+                new SqlParameter("@Token",user.Token),
+                new SqlParameter("@Id", user.Id)
+                );
             }
 
             return effctedRow;
