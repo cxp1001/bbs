@@ -9,7 +9,6 @@ J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.GeneratedMSB
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.AssemblyInfoInputs.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.AssemblyInfo.cs
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.csproj.CoreCompileInputs.cache
-J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.csproj.CopyComplete
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\ref\MyBBSWebApi.DAL.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi.DAL\obj\Debug\net5.0\MyBBSWebApi.DAL.pdb

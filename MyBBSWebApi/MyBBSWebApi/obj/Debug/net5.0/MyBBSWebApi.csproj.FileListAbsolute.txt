@@ -99,7 +99,6 @@ J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\ref\MyBBSWebApi.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.pdb
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.genruntimeconfig.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.AssemblyReference.cache
-J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.CopyComplete
 J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.BLL.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.DAL.dll
 J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.Models.dll

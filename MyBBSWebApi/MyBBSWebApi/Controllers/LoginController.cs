@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MyBBSWebApi.BLL;
 using MyBBSWebApi.DAL;
@@ -6,12 +7,15 @@ using MyBBSWebApi.DAL.Core;
 using MyBBSWebApi.Models;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyBBSWebApi.Controllers
 {
     //[Route("api/[controller]/[action]")]
     [Route("[controller]")]
     [ApiController]
+    [EnableCors("any")]
     public class LoginController : ControllerBase
     {
         private readonly IUserBll _userBll;
@@ -22,11 +26,11 @@ namespace MyBBSWebApi.Controllers
         }
 
         [HttpGet]
-        public List<Users> GetAll()
-        {
+        // public List<Users> GetAll()
+        // {
             
-            return _userBll.GetAll(); 
-        }
+        //     return _userBll.GetAll(); 
+        // }
 
 
 
