@@ -51,6 +51,23 @@ namespace MyBBSWebApi.DAL
 
         }
 
+        public Users GetUserByToken(string token)
+        {
+             DataRow dr = null;
+
+            DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Token = @Token", new SqlParameter("@Token", token));
+            if (dataTable.Rows.Count > 0)
+            {
+                dr = dataTable.Rows[0];
+                Users user = ToModel(dr);
+                return user;
+            }
+            else
+            {
+                return default;
+            }
+        }
+
 
         public int AddUser(string UserNo, string UserName, int Userlevel, string Password)
         {

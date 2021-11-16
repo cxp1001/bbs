@@ -25,6 +25,7 @@ namespace MyBBSWebApi.BLL
             {
                 Users user = userlist.Find(m => !m.IsDelete);
                 user.Token = Guid.NewGuid();
+                UpdateUser(user.Id, user.UserNo, user.UserName, user.Password, user.UserLevel, user.Token);
                 return user;
             }
 
@@ -33,7 +34,7 @@ namespace MyBBSWebApi.BLL
 
         public string AddUser(string UserNo, string UserName, int Userlevel, string Password)
         {
-            UserDal userDal = new UserDal();
+            
             int effectedRows = userDal.AddUser(UserNo, UserName, Userlevel, Password);
 
             if (effectedRows > 0)
@@ -51,8 +52,8 @@ namespace MyBBSWebApi.BLL
         public string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token)
         {
 
-            UserDal userDal = new UserDal();
-            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel,token);
+            
+            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel, token);
             if (effectedRows > 0)
             {
                 return "success!";
@@ -66,7 +67,7 @@ namespace MyBBSWebApi.BLL
 
         public string RemoveUser(int id)
         {
-            UserDal userDal = new UserDal();
+            
             int effectedRows = userDal.RemoveUser(id);
             if (effectedRows > 0)
             {
@@ -76,6 +77,17 @@ namespace MyBBSWebApi.BLL
             {
                 return "false!";
             }
+        }
+
+        public Users GetUsersByToken(string token)
+        {
+            Users user = userDal.GetUserByToken(token);
+            if (!user)
+            {
+                throw new Exception("token错误");
+            }
+            
+            return user;
         }
     }
 }

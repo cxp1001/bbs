@@ -63,18 +63,23 @@
                         var userNo = this.userNo;
                         var password = this.password;
                         var remMe = this.remMe;
-                        axios.get("http://localhost:5000/Login/" + userNo + "/" + password).then(function (res) {
-                            console.log(res);
-                        });
+                        // axios.get("http://localhost:5000/Login/" + userNo + "/" + password).then(function (res) {
+                        //     console.log(res);
+                        axios.get(`http://localhost:5000/Login/${userNo}/${password}`).then(function(res){
+                            localStorage["token"] = res.data.token;
+                            console.log(localStorage["token"]);
+                            location.href = "PostList.html";
 
+                        })
                         // axios.get('http://localhost:5000/Login/',{params:{userNo:userNo,password:pwd}}).then(function (res) {
                         //     console.log(res);
-                        // });
+                    },
 
-                    }
-                },
+                    back:function(){
+                        history.go(-1);
+                }
 
-
+                }
 
             });
         })
@@ -105,7 +110,7 @@
 
         <p>
             <el-button type="primary" v-on:click="login">登录</el-button>
-            <el-button>返回</el-button>
+            <el-button v-on:click="back">返回</el-button>
         </p>
 
 
