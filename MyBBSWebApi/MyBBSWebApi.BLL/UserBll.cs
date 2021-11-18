@@ -82,7 +82,7 @@ namespace MyBBSWebApi.BLL
         public Users GetUsersByToken(string token)
         {
             Users user = userDal.GetUserByToken(token);
-            if (!user)
+            if (user == null)
             {
                 throw new Exception("token错误");
             }

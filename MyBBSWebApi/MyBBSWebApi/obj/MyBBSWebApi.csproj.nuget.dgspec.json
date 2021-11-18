@@ -1,36 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi/MyBBSWebApi.csproj": {}
+    "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi\\MyBBSWebApi.csproj": {}
   },
   "projects": {
-    "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj": {
+    "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj",
+        "projectUniqueName": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
         "projectName": "MyBBSWebApi.BLL",
-        "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj",
-        "packagesPath": "/Users/liwenchao/.nuget/packages/",
-        "outputPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/obj/",
+        "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj",
+        "packagesPath": "C:\\Users\\udeii\\.nuget\\packages\\",
+        "outputPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/liwenchao/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\udeii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj": {
-                "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj"
+              "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj": {
+                "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj"
               },
-              "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj": {
-                "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj"
+              "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+                "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
               }
             }
           }
@@ -59,34 +65,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj": {
+    "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
+        "projectUniqueName": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
         "projectName": "MyBBSWebApi.DAL",
-        "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
-        "packagesPath": "/Users/liwenchao/.nuget/packages/",
-        "outputPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.DAL/obj/",
+        "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj",
+        "packagesPath": "C:\\Users\\udeii\\.nuget\\packages\\",
+        "outputPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/liwenchao/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\udeii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj": {
-                "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj"
+              "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+                "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
               }
             }
           }
@@ -121,26 +133,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj": {
+    "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj",
+        "projectUniqueName": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
         "projectName": "MyBBSWebApi.Models",
-        "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj",
-        "packagesPath": "/Users/liwenchao/.nuget/packages/",
-        "outputPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/obj/",
+        "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
+        "packagesPath": "C:\\Users\\udeii\\.nuget\\packages\\",
+        "outputPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/liwenchao/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\udeii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -173,37 +191,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi/MyBBSWebApi.csproj": {
+    "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi\\MyBBSWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi/MyBBSWebApi.csproj",
+        "projectUniqueName": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi\\MyBBSWebApi.csproj",
         "projectName": "MyBBSWebApi",
-        "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi/MyBBSWebApi.csproj",
-        "packagesPath": "/Users/liwenchao/.nuget/packages/",
-        "outputPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi/obj/",
+        "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi\\MyBBSWebApi.csproj",
+        "packagesPath": "C:\\Users\\udeii\\.nuget\\packages\\",
+        "outputPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/liwenchao/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\udeii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj": {
-                "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj"
+              "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
+                "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj"
               },
-              "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj": {
-                "projectPath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj"
+              "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
+                "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"
               }
             }
           }
@@ -237,12 +261,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-x64",
-              "version": "[5.0.9, 5.0.9]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -251,7 +269,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

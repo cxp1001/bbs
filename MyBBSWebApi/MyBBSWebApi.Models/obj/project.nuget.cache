@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BJl9EZmX0woNzsgLGFffcrjL+p6e0QHzlc/r5fViONjgqNxqbUTJXFdNo4N2/bB1uwZ1d1MKdQiZbY5SQR/vtw==",
+  "dgSpecHash": "FFihgualsx8ZY5CsXD7F49QBLWh3w4RV/0/rvdDk3cWb/Hr/PwFlZXYHF4/3dVlqpJnDQfRb4chlmWjUY/DfRw==",
   "success": true,
-  "projectFilePath": "/Users/liwenchao/code/bbs/MyBBSWebApi/MyBBSWebApi.Models/MyBBSWebApi.Models.csproj",
+  "projectFilePath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
