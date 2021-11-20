@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MyBBSWebApi.BLL;
+using MyBBSWebApi.Common;
 using MyBBSWebApi.DAL;
 using MyBBSWebApi.DAL.Core;
 using MyBBSWebApi.Models;
@@ -10,6 +11,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System;
+
 
 namespace MyBBSWebApi.Controllers
 {
@@ -39,6 +41,7 @@ namespace MyBBSWebApi.Controllers
         public Users GetLoginRes(string userNo, string password)
         {
             
+            
             Users user = _userBll.CheckLogin(userNo, password);
             return user;
            
@@ -54,10 +57,10 @@ namespace MyBBSWebApi.Controllers
         }
 
         [HttpPut]
-        public string Update(int id,string userNo,string userName,string password,int? userLevel,Guid token)
+        public string Update(int id,string userNo,string userName,string password,int? userLevel,Guid token,Guid? autoLoginTag)
         {
 
-            return _userBll.UpdateUser(id, userNo, userName, password, userLevel,token); 
+            return _userBll.UpdateUser(id, userNo, userName, password, userLevel,token,autoLoginTag); 
         }
 
         [HttpDelete]

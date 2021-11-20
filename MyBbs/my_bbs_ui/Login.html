@@ -59,9 +59,10 @@
                     remMe: false
                 },
                 mounted(){
-                    this.userNo = localStorage["userInfo,userNo"];
-                    this.password = localStorage["userInfo.password"];
-                   this.remMe = localStorage["isRem"] == 'true'?ture:false;
+                    
+                    this.userNo = JSON.parse(localStorage["userInfo"]).userNo  ;
+                    this.password = JSON.parse(localStorage["userInfo"]).password;
+                   this.remMe = localStorage["isRem"] == 'true'?true:false;
                    console.log(localStorage["userInfo"]);
                 },
 
@@ -88,7 +89,7 @@
                             
                             if (remMe) {
                                 userInfo.userNo = userNo;
-                                userInfo.password = password;
+                                userInfo.password = res.data.autoLoginTag;
                                 localStorage["userInfo"] = JSON.stringify(userInfo);
                             }
                             else{

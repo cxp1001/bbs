@@ -20,5 +20,7 @@ namespace MyBBSWebApi.Models
         public bool IsDelete { get;set; }
 
         public Guid Token{get;set;} 
+
+        public Guid AutoLoginTag {get;set;}
     }
 }

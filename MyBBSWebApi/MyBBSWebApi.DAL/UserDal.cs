@@ -31,6 +31,21 @@ namespace MyBBSWebApi.DAL
         }
 
 
+public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
+        {
+
+
+            DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag", new SqlParameter("@UserNo", userNo), new SqlParameter("@AutoLoginTag", autoLoginTag));
+
+
+            return ToModelList(dataTable);
+
+
+        }
+
+
+
+
         public Users GetUserById(int id)
         {
             DataRow dr = null;
@@ -80,7 +95,7 @@ namespace MyBBSWebApi.DAL
         }
 
 
-        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel,Guid? token)
+        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel,Guid? token,Guid? autoLoginTag)
         {
 
             DataRow dr = null;
@@ -96,14 +111,17 @@ namespace MyBBSWebApi.DAL
                 user.UserName = userName ?? dr["UserName"].ToString();
                 user.UserNo = userNo ?? dr["UserNo"].ToString();
                 user.Token = token??new Guid();
+                user.AutoLoginTag = autoLoginTag??new Guid();
 
-                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token WHERE Id = @Id",
+
+                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token,AutoLoginTag=@AutoLoginTag WHERE Id = @Id",
                 new SqlParameter("@UserNo", user.UserNo),
                 new SqlParameter("@UserName", user.UserName),
                 new SqlParameter("@UserLevel", user.UserLevel),
                 new SqlParameter("@Password", user.Password),
                 new SqlParameter("@Token",user.Token),
-                new SqlParameter("@Id", user.Id)
+                new SqlParameter("@Id", user.Id),
+                new SqlParameter("@AutoLoginTag",user.AutoLoginTag)
                 );
             }
 
@@ -144,6 +162,8 @@ namespace MyBBSWebApi.DAL
             user.UserName = dr["UserName"].ToString();
             user.UserNo = dr["UserNo"].ToString();
             user.IsDelete = (bool)dr["IsDelete"];
+            user.AutoLoginTag = (Guid)dr["AutoLoginTag"];
+            user.Token = (Guid)dr["Token"];
             return user;
         }
     }

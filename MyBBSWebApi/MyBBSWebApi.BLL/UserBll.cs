@@ -1,4 +1,5 @@
-﻿using MyBBSWebApi.DAL;
+﻿using MyBBSWebApi.Common;
+using MyBBSWebApi.DAL;
 using MyBBSWebApi.Models;
 using System;
 using System.Collections.Generic;
@@ -16,19 +17,40 @@ namespace MyBBSWebApi.BLL
 
         public Users CheckLogin(string userNo, string password)
         {
-            List<Users> userlist = userDal.GetUserByUserNoAndPassword(userNo, password);
+            List<Users> userlist = userDal.GetUserByUserNoAndPassword(userNo, password.ToMd5());
             if (userlist.Count <= 0)
             {
-                return default;
+                 userlist = userDal.GetUserByUserNoAndAutoLoginTag(userNo,password);
+                if(userlist.Count<=0)
+                {
+                    return default;
+                }
+                else
+                {
+                    return GetLoginResult(userlist,false);
+                }
+
             }
             else
             {
-                Users user = userlist.Find(m => !m.IsDelete);
-                user.Token = Guid.NewGuid();
-                UpdateUser(user.Id, user.UserNo, user.UserName, user.Password, user.UserLevel, user.Token);
-                return user;
+                return GetLoginResult(userlist,true);
             }
 
+        }
+
+
+        private Users GetLoginResult(List<Users> userlist,bool isPasswordLogin)
+        {
+            Users user = userlist.Find(m => !m.IsDelete);
+                user.Token = Guid.NewGuid();
+
+                //用户使用密码登录则创建新的atuologintag
+                if(isPasswordLogin)
+                {
+                    user.AutoLoginTag = Guid.NewGuid();
+                }
+                UpdateUser(user.Id, user.UserNo, user.UserName, user.Password, user.UserLevel, user.Token,user.AutoLoginTag);
+                return user;
         }
 
 
@@ -49,11 +71,11 @@ namespace MyBBSWebApi.BLL
         }
 
 
-        public string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token)
+        public string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token,Guid? autoLoginTag)
         {
 
             
-            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel, token);
+            int effectedRows = userDal.UpdateUser(id, userNo, userName, password, userLevel, token,autoLoginTag);
             if (effectedRows > 0)
             {
                 return "success!";

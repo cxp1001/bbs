@@ -490,6 +490,16 @@
           }
         }
       },
+      "MyBBSWebApi.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
+        }
+      },
       "MyBBSWebApi.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1586,6 +1596,11 @@
         "version.txt"
       ]
     },
+    "MyBBSWebApi.Common/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
+      "msbuildProject": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj"
+    },
     "MyBBSWebApi.DAL/1.0.0": {
       "type": "project",
       "path": "../MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
@@ -1599,6 +1614,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "MyBBSWebApi.Common >= 1.0.0",
       "MyBBSWebApi.DAL >= 1.0.0",
       "MyBBSWebApi.Models >= 1.0.0"
     ]
@@ -1635,6 +1651,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj": {
+              "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj"
+            },
             "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj": {
               "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.DAL\\MyBBSWebApi.DAL.csproj"
             },

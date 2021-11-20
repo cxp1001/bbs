@@ -568,6 +568,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "MyBBSWebApi.Common": "1.0.0",
           "MyBBSWebApi.DAL": "1.0.0",
           "MyBBSWebApi.Models": "1.0.0"
         },
@@ -576,6 +577,16 @@
         },
         "runtime": {
           "bin/placeholder/MyBBSWebApi.BLL.dll": {}
+        }
+      },
+      "MyBBSWebApi.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyBBSWebApi.Common.dll": {}
         }
       },
       "MyBBSWebApi.DAL/1.0.0": {
@@ -1786,6 +1797,11 @@
       "path": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj",
       "msbuildProject": "../MyBBSWebApi.BLL/MyBBSWebApi.BLL.csproj"
     },
+    "MyBBSWebApi.Common/1.0.0": {
+      "type": "project",
+      "path": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
+      "msbuildProject": "../MyBBSWebApi.Common/MyBBSWebApi.Common.csproj"
+    },
     "MyBBSWebApi.DAL/1.0.0": {
       "type": "project",
       "path": "../MyBBSWebApi.DAL/MyBBSWebApi.DAL.csproj",
@@ -1801,6 +1817,7 @@
     "net5.0": [
       "Microsoft.Data.SqlClient >= 3.0.1",
       "MyBBSWebApi.BLL >= 1.0.0",
+      "MyBBSWebApi.Common >= 1.0.0",
       "MyBBSWebApi.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -1839,6 +1856,9 @@
           "projectReferences": {
             "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj": {
               "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.BLL\\MyBBSWebApi.BLL.csproj"
+            },
+            "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj": {
+              "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj"
             },
             "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj": {
               "projectPath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Models\\MyBBSWebApi.Models.csproj"

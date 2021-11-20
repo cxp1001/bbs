@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "MyBBSWebApi.BLL/1.0.0": {
         "dependencies": {
+          "MyBBSWebApi.Common": "1.0.0",
           "MyBBSWebApi.DAL": "1.0.0",
           "MyBBSWebApi.Models": "1.0.0"
         },
@@ -356,6 +357,11 @@
           }
         }
       },
+      "MyBBSWebApi.Common/1.0.0": {
+        "runtime": {
+          "MyBBSWebApi.Common.dll": {}
+        }
+      },
       "MyBBSWebApi.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "3.0.1",
@@ -615,6 +621,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "MyBBSWebApi.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "MyBBSWebApi.DAL/1.0.0": {
       "type": "project",

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.BLL", "MyBBSWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.Models", "MyBBSWebApi.Models\MyBBSWebApi.Models.csproj", "{54FAF581-146C-482A-9A25-C3CCFDCF1469}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBBSWebApi.Common", "MyBBSWebApi.Common\MyBBSWebApi.Common.csproj", "{D4DEEAE9-88A6-4975-9405-41F075557784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54FAF581-146C-482A-9A25-C3CCFDCF1469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4DEEAE9-88A6-4975-9405-41F075557784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DEEAE9-88A6-4975-9405-41F075557784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DEEAE9-88A6-4975-9405-41F075557784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DEEAE9-88A6-4975-9405-41F075557784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

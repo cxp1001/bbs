@@ -15,6 +15,6 @@ namespace MyBBSWebApi.BLL
         string AddUser(string UserNo, string UserName, int Userlevel, string Password);
 
         string RemoveUser(int id);
-        string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token);
+        string UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token,Guid? autoLoginTag);
     }
 }

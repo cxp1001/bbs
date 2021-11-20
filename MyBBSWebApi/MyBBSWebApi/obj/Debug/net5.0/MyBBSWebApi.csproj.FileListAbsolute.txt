@@ -164,3 +164,5 @@ J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.RazorTargetAssemblyI
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.csproj.CopyComplete
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.genruntimeconfig.cache
 J:\bbs\MyBBSWebApi\MyBBSWebApi\obj\Debug\net5.0\MyBBSWebApi.MvcApplicationPartsAssemblyInfo.cs
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.Common.dll
+J:\bbs\MyBBSWebApi\MyBBSWebApi\bin\Debug\net5.0\MyBBSWebApi.Common.pdb
