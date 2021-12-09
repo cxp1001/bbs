@@ -8,24 +8,31 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/liwenchao/.nuget/packages/": {}
+    "C:\\Users\\udeii\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/bbs/MyBBSWebApi/MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
+      "projectUniqueName": "j:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj",
       "projectName": "MyBBSWebApi.Common",
-      "projectPath": "/Volumes/bbs/MyBBSWebApi/MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
-      "packagesPath": "/Users/liwenchao/.nuget/packages/",
-      "outputPath": "/Volumes/bbs/MyBBSWebApi/MyBBSWebApi.Common/obj/",
+      "projectPath": "j:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj",
+      "packagesPath": "C:\\Users\\udeii\\.nuget\\packages\\",
+      "outputPath": "j:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/liwenchao/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\udeii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -53,18 +60,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -14,7 +14,6 @@ j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\bin\Debug\net5.0\MyBBSWebApi.Common.deps.j
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\bin\Debug\net5.0\MyBBSWebApi.Common.dll
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\bin\Debug\net5.0\ref\MyBBSWebApi.Common.dll
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\bin\Debug\net5.0\MyBBSWebApi.Common.pdb
-j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\obj\Debug\net5.0\MyBBSWebApi.Common.csproj.AssemblyReference.cache
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\obj\Debug\net5.0\MyBBSWebApi.Common.GeneratedMSBuildEditorConfig.editorconfig
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\obj\Debug\net5.0\MyBBSWebApi.Common.AssemblyInfoInputs.cache
 j:\bbs\MyBBSWebApi\MyBBSWebApi.Common\obj\Debug\net5.0\MyBBSWebApi.Common.AssemblyInfo.cs
