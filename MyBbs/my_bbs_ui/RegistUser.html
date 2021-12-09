@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/elementui.js"></script>
+    <script src="./lib/axios.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./lib/elementui.css" />
+    <style>
+        .regist-pad {
+            padding: 66px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 666px;
+            height: 366px;
+            margin: auto;
+            margin-top: 10%;
+            box-shadow: 0 0 10px rgb(9, 214, 60);
+        }
+
+        .el-input {
+            margin-bottom: 20px;
+        }
+
+        .el-button {
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 0px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var vm = new Vue({
+                el: "#regist",
+                data: {
+                    userName: "",
+                    userNo: "",
+                    password: "",
+                    passwordConfirm: "",
+                },
+                methods: {
+                    regist: function () 
+                    {
+                        // $.post("http://localhost:5000/login",{
+                        //     userName:this.userName,userNo:this.userNo,password:this.password
+                        // },function(res){
+                        //     console.log(res);
+                        // })
+
+
+                        axios.post("http://127.0.0.1:5000/login", 
+                        { userName: this.userName, userNo: this.userNo, password: this.password }).then
+                        (function (res) 
+                        {
+                            console.log(this.res);
+                        })
+
+                    }
+                }
+
+        })}
+    </script>
+</head>
+
+<body>
+    <div id="regist">
+        <div class="regist-pad">
+            <h2>用户注册</h2>
+            <el-input v-model="userName" placeholder="请输入用户名"></el-input>
+            <el-input v-model="userNo" placeholder="请输入账号"></el-input>
+            <el-input v-model="password" placeholder="请输入密码"></el-input>
+            <el-input v-model="passwordConfirm" placeholder="请输入密码"></el-input>
+
+            <el-button type="primary" v-on:click="regist">注册</el-button>
+        </div>
+    </div>
+</body>
+
+</html>

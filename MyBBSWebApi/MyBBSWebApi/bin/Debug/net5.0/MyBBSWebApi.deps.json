@@ -717,8 +717,7 @@
       "MyBBSWebApi.BLL/1.0.0": {
         "dependencies": {
           "MyBBSWebApi.Common": "1.0.0",
-          "MyBBSWebApi.DAL": "1.0.0",
-          "MyBBSWebApi.Models": "1.0.0"
+          "MyBBSWebApi.DAL": "1.0.0"
         },
         "runtime": {
           "MyBBSWebApi.BLL.dll": {}

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rCu07U5L6X4W+BYVlpq2V8apuSQTw2iqLoAixlFDAC25DTt4BAng89YkjidM98ays3L2GiGDKmjih687CKjSag==",
+  "dgSpecHash": "cJcGdPkBqO5jMHLqmg1SXH3ITiwleY6V7/zFynp279yyZEFkJ0m6722l7sENlb9a0+5snQmsbLK+C9tRR6dXWQ==",
   "success": true,
-  "projectFilePath": "J:\\bbs\\MyBBSWebApi\\MyBBSWebApi.Common\\MyBBSWebApi.Common.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Volumes/bbs/MyBBSWebApi/MyBBSWebApi.Common/MyBBSWebApi.Common.csproj",
+  "expectedPackageFiles": [
+    "/Users/liwenchao/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

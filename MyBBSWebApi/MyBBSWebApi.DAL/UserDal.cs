@@ -31,14 +31,22 @@ namespace MyBBSWebApi.DAL
         }
 
 
-public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
+        public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLoginTag)
         {
+            try
+            {
+                DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag", new SqlParameter("@UserNo", userNo), new SqlParameter("@AutoLoginTag", autoLoginTag));
 
 
-            DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE UserNo = @UserNo AND AutoLoginTag = @AutoLoginTag", new SqlParameter("@UserNo", userNo), new SqlParameter("@AutoLoginTag", autoLoginTag));
+                return ToModelList(dataTable);
+            }
+            catch (System.Exception)
+            {
+                return default;
+                throw;
+            }
 
 
-            return ToModelList(dataTable);
 
 
         }
@@ -68,7 +76,7 @@ public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLogi
 
         public Users GetUserByToken(string token)
         {
-             DataRow dr = null;
+            DataRow dr = null;
 
             DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Token = @Token", new SqlParameter("@Token", token));
             if (dataTable.Rows.Count > 0)
@@ -84,18 +92,46 @@ public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLogi
         }
 
 
-        public int AddUser(string UserNo, string UserName, int Userlevel, string Password)
+        public int AddUser(Users user)
         {
 
 
 
-            return SqlHelper.ExecuteNonQuery("INSERT INTO Users(UserNo,Password,UserName,Userlevel) VALUES(@UserNo,@Password,@UserName,@Userlevel)", new SqlParameter("@UserNo", UserNo), new SqlParameter("@Password", Password), new SqlParameter("@UserName", UserName), new SqlParameter("@Userlevel", Userlevel));
+            return SqlHelper.ExecuteNonQuery("INSERT INTO Users(UserNo,Password,UserName,Userlevel,IsDelete) VALUES(@UserNo,@Password,@UserName,@Userlevel,@IsDelete)", new SqlParameter("@UserNo", user.UserNo), new SqlParameter("@Password", user.Password), new SqlParameter("@UserName", user.UserName), new SqlParameter("@Userlevel", user.UserLevel), new SqlParameter("@IsDelete", user.IsDelete));
 
 
         }
 
 
-        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel,Guid? token,Guid? autoLoginTag)
+        public int UpdateUserOfUI(Users user)
+        {
+
+            DataRow dr = null;
+            DataTable dataTable = SqlHelper.ExecuteTable("SELECT * FROM Users WHERE Id = @Id", new SqlParameter("@Id", user.Id));
+            int effctedRow = 0;
+            if (dataTable.Rows.Count != 0)
+            {
+                dr = dataTable.Rows[0];
+
+                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token,AutoLoginTag=@AutoLoginTag,AutoLoginLimitTime=@AutoLoginLimitTime WHERE Id = @Id",
+                new SqlParameter("@UserNo", user.UserNo),
+                new SqlParameter("@UserName", user.UserName),
+                new SqlParameter("@UserLevel", user.UserLevel),
+                new SqlParameter("@Password", user.Password),
+                new SqlParameter("@Token", user.Token),
+                new SqlParameter("@Id", user.Id),
+                new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+                new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime)
+
+                );
+            }
+
+            return effctedRow;
+        }
+
+
+
+        public int UpdateUser(int id, string userNo, string userName, string password, int? userLevel, Guid? token, Guid? autoLoginTag, DateTime? autoLoginLimitTime)
         {
 
             DataRow dr = null;
@@ -110,18 +146,21 @@ public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLogi
                 user.UserLevel = userLevel ?? (int)dr["Userlevel"];
                 user.UserName = userName ?? dr["UserName"].ToString();
                 user.UserNo = userNo ?? dr["UserNo"].ToString();
-                user.Token = token??new Guid();
-                user.AutoLoginTag = autoLoginTag??new Guid();
+                user.Token = token ?? new Guid();
+                user.AutoLoginTag = autoLoginTag ?? new Guid();
+                user.AutoLoginLimitTime = autoLoginLimitTime;
 
 
-                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token,AutoLoginTag=@AutoLoginTag WHERE Id = @Id",
+                effctedRow = SqlHelper.ExecuteNonQuery("UPDATE Users Set UserNo = @UserNo,UserName = @UserName,UserLevel = @UserLEvel,Password = @Password,Token=@Token,AutoLoginTag=@AutoLoginTag,AutoLoginLimitTime=@AutoLoginLimitTime WHERE Id = @Id",
                 new SqlParameter("@UserNo", user.UserNo),
                 new SqlParameter("@UserName", user.UserName),
                 new SqlParameter("@UserLevel", user.UserLevel),
                 new SqlParameter("@Password", user.Password),
-                new SqlParameter("@Token",user.Token),
+                new SqlParameter("@Token", user.Token),
                 new SqlParameter("@Id", user.Id),
-                new SqlParameter("@AutoLoginTag",user.AutoLoginTag)
+                new SqlParameter("@AutoLoginTag", user.AutoLoginTag),
+                new SqlParameter("@AutoLoginLimitTime", user.AutoLoginLimitTime)
+
                 );
             }
 
@@ -162,8 +201,10 @@ public List<Users> GetUserByUserNoAndAutoLoginTag(string userNo, string autoLogi
             user.UserName = dr["UserName"].ToString();
             user.UserNo = dr["UserNo"].ToString();
             user.IsDelete = (bool)dr["IsDelete"];
-            user.AutoLoginTag = (Guid)dr["AutoLoginTag"];
             user.Token = (Guid)dr["Token"];
+            user.AutoLoginTag = (Guid)dr["AutoLoginTag"];
+            user.AutoLoginLimitTime = (DateTime)dr["AutoLoginLimitTime"];
+
             return user;
         }
     }

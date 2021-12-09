@@ -22,5 +22,7 @@ namespace MyBBSWebApi.Models
         public Guid Token{get;set;} 
 
         public Guid AutoLoginTag {get;set;}
+
+        public DateTime? AutoLoginLimitTime {get;set;}
     }
 }

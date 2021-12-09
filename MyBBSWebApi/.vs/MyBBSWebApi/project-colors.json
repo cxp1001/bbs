@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f56113a8-aedd-4d1b-99a6-12a7db734380": {
+      "ProjectGuid": "f56113a8-aedd-4d1b-99a6-12a7db734380",
+      "DisplayName": "MyBBSWebApi",
+      "ColorIndex": 0
+    },
+    "f4841889-cceb-43b9-afbc-4891b247bcf7": {
+      "ProjectGuid": "f4841889-cceb-43b9-afbc-4891b247bcf7",
+      "DisplayName": "MyBBSWebApi.BLL",
+      "ColorIndex": 1
+    },
+    "d4deeae9-88a6-4975-9405-41f075557784": {
+      "ProjectGuid": "d4deeae9-88a6-4975-9405-41f075557784",
+      "DisplayName": "MyBBSWebApi.Common",
+      "ColorIndex": 2
+    },
+    "fb2262e4-980f-4e62-84c9-f8f6fd14f40c": {
+      "ProjectGuid": "fb2262e4-980f-4e62-84c9-f8f6fd14f40c",
+      "DisplayName": "MyBBSWebApi.DAL",
+      "ColorIndex": 3
+    },
+    "54faf581-146c-482a-9a25-c3ccfdcf1469": {
+      "ProjectGuid": "54faf581-146c-482a-9a25-c3ccfdcf1469",
+      "DisplayName": "MyBBSWebApi.Models",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

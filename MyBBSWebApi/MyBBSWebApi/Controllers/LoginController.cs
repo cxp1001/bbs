@@ -17,7 +17,7 @@ namespace MyBBSWebApi.Controllers
 {
     //[Route("api/[controller]/[action]")]
     [Route("[controller]")]
-    [ApiController]
+    //[ApiController]
     [EnableCors("any")]
     public class LoginController : ControllerBase
     {
@@ -49,18 +49,17 @@ namespace MyBBSWebApi.Controllers
         }
 
         [HttpPost]
-
-        
-        public string Insert(string UserNo, string UserName, int Userlevel, string Password)
+        public string Insert([FromBody]Users user)
         {
-            return _userBll.AddUser(UserNo, UserName, Userlevel, Password);
+          
+            return _userBll.AddUser(user);
         }
 
         [HttpPut]
-        public string Update(int id,string userNo,string userName,string password,int? userLevel,Guid token,Guid? autoLoginTag)
+        public string Update(int id,string userNo,string userName,string password,int? userLevel,Guid token,Guid? autoLoginTag,DateTime? AutoLoginTimeLimit)
         {
 
-            return _userBll.UpdateUser(id, userNo, userName, password, userLevel,token,autoLoginTag); 
+            return _userBll.UpdateUser(id, userNo, userName, password, userLevel,token,null,null); 
         }
 
         [HttpDelete]
